@@ -34,7 +34,7 @@ total = 0
 for li in range(len(lines)) :
     l = lines[li]
     r1, r2 = l[:-1].split(' ')
-    pr1 = [ len(r) for r in r1.split() if r ]
+    pr1 = [ len(r) for r in r1.split('.') if r ]
     pr2 = [ int(n) for n in r2.split(',') ]
     
     groupings = [ g for g in create_groupings([], pr1, pr2, [ i for i in range(len(pr1)) ], [ i for i in range(len(pr2)) ]) if sum([ len(x[0]) for x in g ]) == len(pr2) ]
